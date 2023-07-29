@@ -1,0 +1,20 @@
+@import 'colors.module.scss';
+@import 'variables.module.scss';
+
+@mixin section-header() {
+  display: flex;
+  align-items: center;
+  height: $section-header-height;
+  padding: 0 40px;
+
+  border-bottom: 1px solid $dark-gray-color;
+}
+
+@mixin multiline-ellipsis($max-lines) {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: normal;
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $max-lines;
+}

@@ -1,0 +1,7 @@
+@import '~style/mixins';
+@import '~style/colors.module';
+
+.trimmedText {
+  @include multiline-ellipsis(1);
+  text-align: start;
+}

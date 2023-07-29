@@ -1,0 +1,13 @@
+@import '~style/colors.module';
+@import '~style/mixins';
+
+.header {
+  height: 100%;
+  
+  background-color: $light-gray-color;
+  border-right: 1px solid $dark-gray-color;  
+}
+
+.logoWrapper {
+  @include section-header;
+}

@@ -1,11 +1,11 @@
 import { NavLink } from "react-router-dom";
 import { Stack, Tab, Typography } from "@mui/material";
+import CircleIcon from "@mui/icons-material/Circle";
 
 import { Note } from "common/models";
 import palette from "style/_colors.module.scss";
 
 import styles from "./NoteTab.module.scss";
-import CircleIcon from "@mui/icons-material/Circle";
 
 interface NoteTabProps {
   note: Note;
@@ -48,6 +48,8 @@ export const NoteTab = (props: NoteTabProps) => {
     </>
   );
 
+  const { note, ...nativeTabProps } = props;
+
   return (
     <Tab
       component={NavLink}
@@ -63,7 +65,7 @@ export const NoteTab = (props: NoteTabProps) => {
           color: palette.black,
         },
       }}
-      {...props}
+      {...nativeTabProps}
     />
   );
 };

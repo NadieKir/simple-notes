@@ -25,6 +25,7 @@ export const Tag = ({ color, label }: TagProps) => {
       onClick={handleClick}
       sx={{
         justifyContent: "flex-start",
+        minHeight: "34px",
         paddingLeft: "5px",
         paddingRight: "5px",
         backgroundColor: color,

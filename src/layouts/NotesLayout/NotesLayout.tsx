@@ -9,23 +9,17 @@ import { mockedNotes } from "common/helpers";
 import styles from "./NotesLayout.module.scss";
 
 export const NotesLayout = () => {
-  const [value, setValue] = useState(0);
-
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue);
-  };
-
   return (
     <Grid component="main" container>
       <Grid component="section" className={styles.notesSection} xs={3}>
-        <div className={styles.searchWrapper}>g</div>
+        <div className={styles.searchWrapper}>search</div>
 
         <Tabs
           className={styles.notes}
           variant="scrollable"
           orientation="vertical"
-          value={value}
-          onChange={handleChange}
+          value={false}
+          visibleScrollbar={true}
         >
           {mockedNotes.map((note) => (
             <NoteTab note={note} />

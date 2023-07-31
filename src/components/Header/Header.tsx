@@ -25,12 +25,16 @@ export const Header = () => {
 
       <h1 className="visually-hidden">Notes Taking App</h1>
 
-      <Stack spacing={4} component="nav" flexGrow={1} px={"40px"} py={"50px"}>
+      <Stack component="nav" className={styles.nav} spacing={4}>
         <Stack spacing={1} sx={{ color: palette.black }}>
           <NavLinkButton to="/notes">Notes</NavLinkButton>
-          <Stack spacing={0.5}>
+          <Stack className={styles.tags} spacing={0.5}>
             <Tag color="#5A78E2" label="#travelling" />
             <Tag color="#4A78E2" label="#cooking" />
+            <Tag color="#4A78E2" label="#cooking" />
+            <Tag color="#4A78E2" label="#cooking" />
+            <Tag color="#5A78E2" label="#travelling" />
+            <Tag color="#5A78E2" label="#travelling" />
           </Stack>
         </Stack>
         <NavLinkButton to="/trash">Trash</NavLinkButton>

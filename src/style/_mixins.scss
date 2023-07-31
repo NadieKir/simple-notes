@@ -5,6 +5,7 @@
   display: flex;
   align-items: center;
   height: $section-header-height;
+  min-height: $section-header-height;
   padding: 0 40px;
 
   border-bottom: 1px solid $dark-gray-color;

@@ -6,5 +6,6 @@ export type Note = {
   content: string,
   date: string,
   tags: Tag[],
+  deleted: boolean
 }
 

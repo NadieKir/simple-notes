@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { createSearchParams, useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import { Chip } from "@mui/material";
 import { alpha } from "@mui/material/styles";
 import DoneIcon from "@mui/icons-material/Done";
@@ -11,17 +11,39 @@ interface TagProps {
 }
 
 export const Tag = ({ color, label }: TagProps) => {
-  const [active, setActive] = useState(false);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const isActive = searchParams.getAll("tags").includes(label);
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const contrastColor = getContrastColor(color);
 
   const handleClick = () => {
-    setActive(!active);
+    const isCurrentLabelActive = searchParams.getAll("tags").includes(label);
+    let currentTags = searchParams.getAll("tags");
+
+    if (isCurrentLabelActive) {
+      currentTags = [...currentTags.filter((t) => t !== label)];
+    } else {
+      currentTags = [...currentTags, label];
+    }
+
+    const newSearchParams = createSearchParams({ tags: currentTags });
+
+    if (!location.pathname.includes("/notes")) {
+      const path = `/notes?${newSearchParams.toString()}`;
+      navigate(path);
+
+      return;
+    }
+
+    setSearchParams(newSearchParams);
   };
 
   return (
     <Chip
       label={label}
-      icon={active ? <DoneIcon fontSize="small" style={{ color: contrastColor }} /> : undefined}
+      icon={isActive ? <DoneIcon fontSize="small" style={{ color: contrastColor }} /> : undefined}
       onClick={handleClick}
       sx={{
         justifyContent: "flex-start",

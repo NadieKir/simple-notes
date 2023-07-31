@@ -7,6 +7,7 @@ import palette from "style/_colors.module.scss";
 
 import styles from "./Header.module.scss";
 import logo from "./images/logo.svg";
+import { mockedTags } from "common/helpers";
 
 export const Header = () => {
   const navigate = useNavigate();
@@ -29,12 +30,9 @@ export const Header = () => {
         <Stack spacing={1} sx={{ color: palette.black }}>
           <NavLinkButton to="/notes">Notes</NavLinkButton>
           <Stack className={styles.tags} spacing={0.5}>
-            <Tag color="#5A78E2" label="#travelling" />
-            <Tag color="#4A78E2" label="#cooking" />
-            <Tag color="#4A78E2" label="#cooking" />
-            <Tag color="#4A78E2" label="#cooking" />
-            <Tag color="#5A78E2" label="#travelling" />
-            <Tag color="#5A78E2" label="#travelling" />
+            {mockedTags.map((tag) => (
+              <Tag color={tag.color} label={tag.label} />
+            ))}
           </Stack>
         </Stack>
         <NavLinkButton to="/trash">Trash</NavLinkButton>

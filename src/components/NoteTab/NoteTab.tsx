@@ -53,7 +53,7 @@ export const NoteTab = (props: NoteTabProps) => {
   return (
     <Tab
       component={NavLink}
-      to={`/notes/${id}`}
+      to={`/${note.deleted ? "trash" : "notes"}/${id}`}
       label={label}
       sx={{
         alignItems: "flex-start",

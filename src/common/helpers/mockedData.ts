@@ -1,4 +1,4 @@
-import { Tag } from "common/models";
+import { Note, Tag } from "common/models";
 
 export const mockedTags: Tag[] = [
   {
@@ -13,61 +13,69 @@ export const mockedTags: Tag[] = [
   },
 ];
 
-export const mockedNotes = [
+export const mockedNotes: Note[] = [
   {
     id: "1",
     heading: "В сети обсуждают кадр с Райаном Гослингом в образе Кена из фильма «Барби». ... Комедийный фильм «Барби» режиссера Греты Гервик («Леди Берд», «Маленькие женщины») должен выйти на экраны летом 2023 года",
     content: "В сети обсуждают кадр с Райаном Гослингом в образе Кена из фильма «Барби». ... Комедийный фильм «Барби» режиссера Греты Гервик («Леди Берд», «Маленькие женщины») должен выйти на экраны летом 2023 года",
     date: "July 21",
-    tags: mockedTags
+    tags: mockedTags,
+    deleted: false
   }, 
   {
     id: "2",
     heading: "Heading 2",
     content: "Description description 2",
     date: "July 22",
-    tags: mockedTags
+    tags: mockedTags,
+    deleted: true
   }, 
   {
     id: "3",
     heading: "В сети обсуждают кадр с Райаном Гослингом в образе Кена из фильма «Барби». ... Комедийный фильм «Барби» режиссера Греты Гервик («Леди Берд», «Маленькие женщины») должен выйти на экраны летом 2023 года",
     content: "В сети обсуждают кадр с Райаном Гослингом в образе Кена из фильма «Барби». ... Комедийный фильм «Барби» режиссера Греты Гервик («Леди Берд», «Маленькие женщины») должен выйти на экраны летом 2023 года",
     date: "July 21",
-    tags: mockedTags
+    tags: mockedTags,
+    deleted: true
   }, 
   {
     id: "5",
     heading: "Heading 2",
     content: "Description description 2",
     date: "July 22",
-    tags: mockedTags
+    tags: mockedTags,
+    deleted: false
   },
   {
     id: "6",
     heading: "В сети обсуждают кадр с Райаном Гослингом в образе Кена из фильма «Барби». ... Комедийный фильм «Барби» режиссера Греты Гервик («Леди Берд», «Маленькие женщины») должен выйти на экраны летом 2023 года",
     content: "В сети обсуждают кадр с Райаном Гослингом в образе Кена из фильма «Барби». ... Комедийный фильм «Барби» режиссера Греты Гервик («Леди Берд», «Маленькие женщины») должен выйти на экраны летом 2023 года",
     date: "July 21",
-    tags: mockedTags
+    tags: mockedTags,
+    deleted: false
   }, 
   {
     id: "7",
     heading: "Heading 2",
     content: "Description description 2",
     date: "July 22",
-    tags: mockedTags
+    tags: mockedTags,
+    deleted: false
   },
   {
     id: "8",
     heading: "В сети обсуждают кадр с Райаном Гослингом в образе Кена из фильма «Барби». ... Комедийный фильм «Барби» режиссера Греты Гервик («Леди Берд», «Маленькие женщины») должен выйти на экраны летом 2023 года",
     content: "В сети обсуждают кадр с Райаном Гослингом в образе Кена из фильма «Барби». ... Комедийный фильм «Барби» режиссера Греты Гервик («Леди Берд», «Маленькие женщины») должен выйти на экраны летом 2023 года",
     date: "July 21",
-    tags: mockedTags
+    tags: mockedTags,
+    deleted: false
   }, 
   {
     id: "9",
     heading: "Heading 2",
     content: "Description description 2",
     date: "July 22",
-    tags: mockedTags
+    tags: mockedTags,
+    deleted: false
   },
 ];

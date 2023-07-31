@@ -16,7 +16,7 @@ export const NoteTab = (props: NoteTabProps) => {
 
   const label = (
     <>
-      <Stack direction="row" justifyContent="space-between" sx={{ width: "100%" }}>
+      <Stack direction="row" justifyContent="space-between" sx={{ width: "100%" }} mb="5px">
         <Typography component="time" className={styles.trimmedText} variant="caption">
           {date}
         </Typography>
@@ -32,17 +32,10 @@ export const NoteTab = (props: NoteTabProps) => {
           ))}
         </Stack>
       </Stack>
-      <Typography component="h3" className={styles.trimmedText} variant="h6">
+      <Typography variant="h3" className={styles.trimmedText}>
         {heading}
       </Typography>
-      <Typography
-        component="p"
-        className={styles.trimmedText}
-        variant="subtitle2"
-        sx={{
-          lineHeight: 1,
-        }}
-      >
+      <Typography variant="subtitle2" className={styles.trimmedText}>
         {content}
       </Typography>
     </>

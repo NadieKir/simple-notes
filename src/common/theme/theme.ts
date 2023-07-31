@@ -11,12 +11,31 @@ export const theme = createTheme({
   },
   typography: {
     fontFamily: typography.primaryFont,
+    h3: {
+      fontSize: 20,
+    },
   },
   components: {
     MuiDivider: {
       styleOverrides: {
         root: {
           borderColor: palette.darkGray,
+        },
+      },
+    },
+    MuiTypography: {
+      defaultProps: {
+        variantMapping: {
+          h1: 'h1',
+          h2: 'h2',
+          h3: 'h3',
+          h4: 'h4',
+          h5: 'h5',
+          h6: 'h6',
+          subtitle1: 'h3',
+          subtitle2: 'p',
+          body1: 'span',
+          body2: 'p',
         },
       },
     },
